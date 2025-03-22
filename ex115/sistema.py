@@ -14,9 +14,15 @@ while True:
         lerArquivo(arq)
     elif resposta == 2:
         cabeçalho("Opção 2")
+        cabeçalho('NOVO CADASTRO')
+        nome = str(input("Nome: "))
+        idade = leiaInt("Idade: ")
+        cadastrar(arq, nome, idade)
     elif resposta == 3:
+        cabeçalho('OPÇÃO DE SAIR DO SISTEMA')
         cabeçalho("Saindo do sistema... Até logo!")
         break
     else:
+        # Opção inválida
         print("\033[31mERRO! digite uma opção válida.\033[m")
     sleep(2)
